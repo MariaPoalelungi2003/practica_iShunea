@@ -10,6 +10,8 @@ import {type} from "node:os";
 import {updateSearchParams} from "@/utils";
 
 
+
+
 const CustomFilter = ({title, options}: CustomFilterProps) => {
     const router = useRouter();
     const [ selected, setSelected] = useState(options[0]);
@@ -26,7 +28,7 @@ const CustomFilter = ({title, options}: CustomFilterProps) => {
             <Listbox
                 value={selected}
                 onChange={(e) => { setSelected(e);
-                handleUpdateParams(e);}}>
+                    handleUpdateParams(e);}}>
                 <div className="relative w-fit z-10">
                     <Listbox.Button className="custom-filter__btn">
                         <span className="block truncate">
